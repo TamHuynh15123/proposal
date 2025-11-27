@@ -15,21 +15,21 @@
     <title>Worklog Tuần 11 :: Báo cáo thực tập</title>
 
     
-    <link href="../../../css/nucleus.css?1764214537" rel="stylesheet">
-    <link href="../../../css/fontawesome-all.min.css?1764214537" rel="stylesheet">
-    <link href="../../../css/hybrid.css?1764214537" rel="stylesheet">
-    <link href="../../../css/featherlight.min.css?1764214537" rel="stylesheet">
-    <link href="../../../css/perfect-scrollbar.min.css?1764214537" rel="stylesheet">
-    <link href="../../../css/auto-complete.css?1764214537" rel="stylesheet">
-    <link href="../../../css/atom-one-dark-reasonable.css?1764214537" rel="stylesheet">
-    <link href="../../../css/theme.css?1764214537" rel="stylesheet">
-    <link href="../../../css/hugo-theme.css?1764214537" rel="stylesheet">
+    <link href="../../../css/nucleus.css?1764216642" rel="stylesheet">
+    <link href="../../../css/fontawesome-all.min.css?1764216642" rel="stylesheet">
+    <link href="../../../css/hybrid.css?1764216642" rel="stylesheet">
+    <link href="../../../css/featherlight.min.css?1764216642" rel="stylesheet">
+    <link href="../../../css/perfect-scrollbar.min.css?1764216642" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1764216642" rel="stylesheet">
+    <link href="../../../css/atom-one-dark-reasonable.css?1764216642" rel="stylesheet">
+    <link href="../../../css/theme.css?1764216642" rel="stylesheet">
+    <link href="../../../css/hugo-theme.css?1764216642" rel="stylesheet">
     
-    <link href="../../../css/theme-workshop.css?1764214537" rel="stylesheet">
+    <link href="../../../css/theme-workshop.css?1764216642" rel="stylesheet">
     
     
 
-    <script src="../../../js/jquery-3.3.1.min.js?1764214537"></script>
+    <script src="../../../js/jquery-3.3.1.min.js?1764216642"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -88,14 +88,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../../js/lunr.min.js?1764214537"></script>
-<script type="text/javascript" src="../../../js/auto-complete.js?1764214537"></script>
+<script type="text/javascript" src="../../../js/lunr.min.js?1764216642"></script>
+<script type="text/javascript" src="../../../js/auto-complete.js?1764216642"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/tamhuynh15123.github.io\/proposal\/\/vi";
     
 </script>
-<script type="text/javascript" src="../../../js/search.js?1764214537"></script>
+<script type="text/javascript" src="../../../js/search.js?1764216642"></script>
  
   </div>
 
@@ -1045,57 +1045,34 @@
   <tbody>
       <tr>
           <td>2</td>
-          <td>- Đọc về CloudFormation và xem ví dụ template; xác định các tài nguyên sẽ đưa vào stack đơn giản (VPC + EC2).</td>
+          <td>- Làm admin dashboard bên Front End React .</td>
           <td>17/11/2025</td>
-          <td>17/11/2025</td>
-          <td>CloudFormation docs</td>
+          <td>18/11/2025</td>
+          <td></td>
       </tr>
       <tr>
           <td>3</td>
-          <td>- Viết CloudFormation template để tạo VPC, public subnet và EC2; validate template bằng cfn-lint hoặc console.</td>
-          <td>18/11/2025</td>
-          <td>18/11/2025</td>
-          <td>CFN template examples</td>
+          <td>- Làm shipper dashboard bên Front End React.</td>
+          <td>19/11/2025</td>
+          <td>20/11/2025</td>
+          <td></td>
       </tr>
       <tr>
           <td>4</td>
-          <td>- Cài Terraform; viết cấu hình Terraform ban đầu (provider, VPC, EC2) và chạy plan để so sánh workflow với CloudFormation.</td>
-          <td>19/11/2025</td>
-          <td>19/11/2025</td>
-          <td>Terraform docs</td>
-      </tr>
-      <tr>
-          <td>5</td>
-          <td>- Modularize Terraform: tạo module nhỏ cho EC2 (biến cho AMI, instance type, security group) và sử dụng tfstate để theo dõi tài nguyên.</td>
-          <td>20/11/2025</td>
-          <td>20/11/2025</td>
-          <td>Terraform modules guide</td>
-      </tr>
-      <tr>
-          <td>6</td>
-          <td>- Thử huỷ stack cho cả CloudFormation và Terraform; đảm bảo không còn tài nguyên thừa (EBS, Elastic IP); ghi lại khác biệt của hai công cụ.</td>
+          <td>- Set up SES bên Back End để gửi mail tài khoản về shippers.</td>
           <td>21/11/2025</td>
           <td>21/11/2025</td>
-          <td>IaC teardown best practices</td>
+          <td>AWS Console Home SES</td>
       </tr>
   </tbody>
 </table>
 <h3 id="kết-quả-đạt-được-tuần-11">Kết quả đạt được tuần 11:</h3>
 <ul>
 <li>
-<p>Nắm được các khái niệm cơ bản của CloudFormation và viết template để tạo VPC, public subnet và EC2 instance.</p>
+<p>Nắm được các khái niệm cơ bản của SES để ứng dụng vào dự án</p>
 </li>
 <li>
-<p>Cài đặt và sử dụng Terraform để provision lại cùng stack, so sánh cách quản lý state và workflow.</p>
-</li>
-<li>
-<p>Tham số hoá template và viết module nhỏ để tái sử dụng IaC; ghi lại quy trình triển khai.</p>
-</li>
-<li>
-<p>Thực hành huỷ stack và xác minh tài nguyên (EBS, Elastic IP) được dọn sạch.</p>
-</li>
-<li>
-<p>Ghi chú: áp dụng IaC cho bài mini-project cuối khóa.</p>
+<p>Học được thêm kiến thức và chức năng cần thiết từ dự án</p>
 </li>
 </ul>
 
@@ -1799,19 +1776,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../../js/clipboard.min.js?1764214537"></script>
-    <script src="../../../js/perfect-scrollbar.min.js?1764214537"></script>
-    <script src="../../../js/perfect-scrollbar.jquery.min.js?1764214537"></script>
-    <script src="../../../js/jquery.sticky.js?1764214537"></script>
-    <script src="../../../js/featherlight.min.js?1764214537"></script>
-    <script src="../../../js/highlight.pack.js?1764214537"></script>
+    <script src="../../../js/clipboard.min.js?1764216642"></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1764216642"></script>
+    <script src="../../../js/perfect-scrollbar.jquery.min.js?1764216642"></script>
+    <script src="../../../js/jquery.sticky.js?1764216642"></script>
+    <script src="../../../js/featherlight.min.js?1764216642"></script>
+    <script src="../../../js/highlight.pack.js?1764216642"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../../js/modernizr.custom-3.6.0.js?1764214537"></script>
-    <script src="../../../js/learn.js?1764214537"></script>
-    <script src="../../../js/hugo-learn.js?1764214537"></script>
+    <script src="../../../js/modernizr.custom-3.6.0.js?1764216642"></script>
+    <script src="../../../js/learn.js?1764216642"></script>
+    <script src="../../../js/hugo-learn.js?1764216642"></script>
 
-    <link href="../../../mermaid/mermaid.css?1764214537" rel="stylesheet" />
-    <script src="../../../mermaid/mermaid.js?1764214537"></script>
+    <link href="../../../mermaid/mermaid.css?1764216642" rel="stylesheet" />
+    <script src="../../../mermaid/mermaid.js?1764216642"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
