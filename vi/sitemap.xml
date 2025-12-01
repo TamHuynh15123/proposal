@@ -98,6 +98,30 @@
                 href="https://tamhuynh15123.github.io/proposal/vi/5-workshop/5.4-s3-onprem/5.4.1-prepare/"
                 />
   </url><url>
+    <loc>https://tamhuynh15123.github.io/proposal/vi/5-workshop/5.1-workshop-overview/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://tamhuynh15123.github.io/proposal/5-workshop/5.1-workshop-overview/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://tamhuynh15123.github.io/proposal/vi/5-workshop/5.1-workshop-overview/"
+                />
+  </url><url>
+    <loc>https://tamhuynh15123.github.io/proposal/vi/1-worklog/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://tamhuynh15123.github.io/proposal/1-worklog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://tamhuynh15123.github.io/proposal/vi/1-worklog/"
+                />
+  </url><url>
     <loc>https://tamhuynh15123.github.io/proposal/vi/4-eventparticipated/4.1-event1/</loc>
     <xhtml:link
                 rel="alternate"
@@ -122,28 +146,28 @@
                 href="https://tamhuynh15123.github.io/proposal/vi/4-eventparticipated/4.2-event2/"
                 />
   </url><url>
-    <loc>https://tamhuynh15123.github.io/proposal/vi/5-workshop/5.1-workshop-overview/</loc>
+    <loc>https://tamhuynh15123.github.io/proposal/vi/4-eventparticipated/4.3-event3/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://tamhuynh15123.github.io/proposal/5-workshop/5.1-workshop-overview/"
+                href="https://tamhuynh15123.github.io/proposal/4-eventparticipated/4.3-event3/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="https://tamhuynh15123.github.io/proposal/vi/5-workshop/5.1-workshop-overview/"
+                href="https://tamhuynh15123.github.io/proposal/vi/4-eventparticipated/4.3-event3/"
                 />
   </url><url>
-    <loc>https://tamhuynh15123.github.io/proposal/vi/1-worklog/</loc>
+    <loc>https://tamhuynh15123.github.io/proposal/vi/4-eventparticipated/4.4-event4/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://tamhuynh15123.github.io/proposal/1-worklog/"
+                href="https://tamhuynh15123.github.io/proposal/4-eventparticipated/4.4-event4/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="https://tamhuynh15123.github.io/proposal/vi/1-worklog/"
+                href="https://tamhuynh15123.github.io/proposal/vi/4-eventparticipated/4.4-event4/"
                 />
   </url><url>
     <loc>https://tamhuynh15123.github.io/proposal/vi/5-workshop/5.3-s3-vpc/5.3.1-create-gwe/</loc>
