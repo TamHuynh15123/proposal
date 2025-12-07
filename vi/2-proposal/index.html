@@ -15,21 +15,21 @@
     <title>Bản đề xuất :: Báo cáo thực tập</title>
 
     
-    <link href="../../css/nucleus.css?1764588072" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1764588072" rel="stylesheet">
-    <link href="../../css/hybrid.css?1764588072" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1764588072" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1764588072" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1764588072" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1764588072" rel="stylesheet">
-    <link href="../../css/theme.css?1764588072" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1764588072" rel="stylesheet">
+    <link href="../../css/nucleus.css?1765099433" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1765099433" rel="stylesheet">
+    <link href="../../css/hybrid.css?1765099433" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1765099433" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1765099433" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1765099433" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1765099433" rel="stylesheet">
+    <link href="../../css/theme.css?1765099433" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1765099433" rel="stylesheet">
     
-    <link href="../../css/theme-workshop.css?1764588072" rel="stylesheet">
+    <link href="../../css/theme-workshop.css?1765099433" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.3.1.min.js?1764588072"></script>
+    <script src="../../js/jquery-3.3.1.min.js?1765099433"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -88,14 +88,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1764588072"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1764588072"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1765099433"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1765099433"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/tamhuynh15123.github.io\/proposal\/\/vi";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1764588072"></script>
+<script type="text/javascript" src="../../js/search.js?1765099433"></script>
  
   </div>
 
@@ -1025,6 +1025,7 @@
         <li><a href="#4-triển-khai-kỹ-thuật">4. Triển khai kỹ thuật</a></li>
         <li><a href="#5-lộ-trình--mốc-triển-khai">5. Lộ trình &amp; Mốc triển khai</a></li>
         <li><a href="#6-ước-tính-ngân-sách">6. Ước tính ngân sách</a></li>
+        <li><a href="#chi-phí-hạ-tầng">Chi phí hạ tầng</a></li>
         <li><a href="#7-đánh-giá-rủi-ro">7. Đánh giá rủi ro</a></li>
         <li><a href="#8-kết-quả-kỳ-vọng">8. Kết quả kỳ vọng</a></li>
       </ul>
@@ -1060,57 +1061,64 @@
 <h3 id="1-tóm-tắt-điều-hành">1. Tóm tắt điều hành</h3>
 <p>Dự án &ldquo;Coffee Cloud – Coffee Shop Order Platform&rdquo; là nền tảng web giúp khách hàng đặt cà phê trực tuyến, tích điểm sau mỗi đơn hàng và đổi voucher ưu đãi.</p>
 <p>Hệ thống hỗ trợ ba nhóm người dùng: Customer, Shipper, và Admin, nhằm tối ưu trải nghiệm đặt hàng, giao hàng và quản lý vận hành quán.</p>
-<p>Ứng dụng Frontend được xây dựng bằng ReactJS, Backend bằng C#/.NET chạy trên AWS Lambda, kết nối qua API Gateway và được triển khai hoàn toàn trên AWS Free Tier với các dịch vụ: Amplify (Hosting + CI/CD), Cognito (Authentication), Lambda .NET (Backend logic), S3 Storage, DynamoDB, SNS (Notifications), SES (Email Service), IAM, và CloudWatch Logs.</p>
+<p>Ứng dụng Frontend được xây dựng bằng ReactJS, Backend bằng C#/.NET chạy trên AWS Elastic Beanstalk, và được triển khai hoàn toàn trên AWS Free Tier với các dịch vụ: Amplify (Hosting + CI/CD), Cognito (Authentication), Elastic Beanstalk (.NET Backend services), S3 Storage, DynamoDB, SNS (Notifications), SES (Email Service), IAM, và CloudWatch Logs.</p>
 <h3 id="2-tuyên-bố-vấn-đề">2. Tuyên bố vấn đề</h3>
 <p><em>Vấn đề hiện tại</em><br>
 Quán cà phê truyền thống gặp khó khăn trong việc quản lý đơn hàng đông đúc, khách hàng phải chờ đợi lâu để đặt hàng và nhận sản phẩm. Không có hệ thống tích điểm để khuyến khích khách hàng quay lại, và việc theo dõi trạng thái đơn hàng chưa minh bạch.</p>
 <p><em>Giải pháp</em><br>
-Nền tảng Coffee Cloud được xây dựng với kiến trúc serverless trên AWS, sử dụng ReactJS cho frontend, C#/.NET Lambda cho backend logic, DynamoDB để lưu trữ dữ liệu và Cognito để quản lý người dùng. Hệ thống cung cấp ba giao diện riêng biệt cho Customer (đặt hàng, tích điểm), Shipper (nhận và giao hàng), và Admin (quản lý tổng thể). Tích hợp API Gateway để đảm bảo bảo mật và khả năng mở rộng. AWS SNS được sử dụng để gửi thông báo realtime về trạng thái đơn hàng, trong khi SES xử lý email notifications và marketing campaigns. Các tính năng chính bao gồm đặt hàng trực tuyến, hệ thống tích điểm, theo dõi đơn hàng thời gian thực, quản lý inventory và hệ thống thông báo đa kênh.</p>
+Nền tảng Coffee Cloud được xây dựng với kiến trúc cloud có khả năng mở rộng trên AWS, sử dụng ReactJS cho frontend được host trên Amplify, và các dịch vụ backend được containerized triển khai trên Elastic Beanstalk. Hệ thống cung cấp ba giao diện riêng biệt cho Customer (đặt hàng, tích điểm), Shipper (nhận và giao hàng), và Admin (quản lý tổng thể). Dữ liệu được lưu trữ trong DynamoDB cho hiệu suất cao với S3 cho static assets và Amazon Location Service cho theo dõi giao hàng. Authentication được quản lý bởi Cognito với hỗ trợ đa role. AWS SNS xử lý thông báo realtime về trạng thái đơn hàng, trong khi SES quản lý email communications. Xử lý thanh toán được tích hợp thông qua các payment gateway bên ngoài. Các tính năng chính bao gồm đặt hàng trực tuyến, hệ thống tích điểm, theo dõi đơn hàng thời gian thực với GPS, quản lý inventory, và hệ thống thông báo đa kênh.</p>
 <p><em>Lợi ích và hoàn vốn đầu tư (ROI)</em><br>
 Hệ thống giúp tăng doanh thu thông qua kênh online, giảm thời gian chờ đợi của khách hàng và tối ưu hóa quy trình vận hành. Chi phí triển khai thấp nhờ sử dụng AWS Free Tier, ước tính chi phí vận hành hàng tháng dưới $5 USD cho giai đoạn đầu. Hệ thống tích điểm giúp tăng tỷ lệ khách hàng quay lại, dự kiến tăng doanh thu 20-30% so với hình thức truyền thống. Thời gian hoàn vốn ước tính 3-6 tháng nhờ tiết kiệm chi phí nhân lực và tăng hiệu quả bán hàng.</p>
 <h3 id="3-kiến-trúc-giải-pháp">3. Kiến trúc giải pháp</h3>
-<p>Coffee Cloud áp dụng kiến trúc serverless hoàn toàn trên AWS để đảm bảo khả năng mở rộng và tiết kiệm chi phí. Frontend ReactJS được deploy trên AWS Amplify với tích hợp CI/CD tự động. Backend API được xây dựng bằng C#/.NET và chạy trên AWS Lambda, kết nối thông qua API Gateway để đảm bảo bảo mật và throttling. Dữ liệu được lưu trữ trong DynamoDB cho hiệu suất cao và S3 cho static assets. Authentication và authorization được quản lý bởi Amazon Cognito với hỗ trợ đa role (Customer, Shipper, Admin).</p>
+<p>Coffee Cloud áp dụng kiến trúc containerized có khả năng mở rộng trên AWS để đảm bảo high availability và tiết kiệm chi phí. Frontend ReactJS được deploy trên AWS Amplify với tích hợp CI/CD tự động từ Git repository. Backend services được containerized và triển khai trên AWS Elastic Beanstalk để dễ dàng scaling và quản lý. Dữ liệu được lưu trữ trong DynamoDB cho hiệu suất cao, S3 cho static assets, và Amazon Location Service cho GPS tracking và tối ưu hóa giao hàng. Authentication và authorization được quản lý bởi Amazon Cognito với hỗ trợ đa role (Customer, Shipper, Admin). Các dịch vụ thanh toán bên ngoài được tích hợp để xử lý giao dịch an toàn.</p>
 <p><img src="../../images/2-Proposal/architecture_proposal.jpg" alt="Coffee Cloud Platform Architecture"></p>
 <p><em>Dịch vụ AWS sử dụng</em></p>
 <ul>
-<li><em>AWS Amplify</em>: Hosting frontend ReactJS với CI/CD pipeline tự động.</li>
-<li><em>AWS Lambda</em>: Backend logic sử dụng C#/.NET runtime để xử lý business logic.</li>
-<li><em>Amazon API Gateway</em>: REST API endpoint để kết nối frontend và backend.</li>
+<li><em>AWS Amplify</em>: Hosting frontend ReactJS với CI/CD pipeline tự động từ Git repository.</li>
+<li><em>AWS Elastic Beanstalk</em>: Containerized .NET Framework 8.0 backend services với auto-scaling và load balancing.</li>
 <li><em>Amazon DynamoDB</em>: NoSQL database lưu trữ dữ liệu users, orders, products, points.</li>
-<li><em>Amazon S3</em>: Lưu trữ static assets như hình ảnh sản phẩm, documents.</li>
+<li><em>Amazon S3</em>: Lưu trữ static assets như hình ảnh sản phẩm, documents, và backup data.</li>
+<li><em>Amazon Location Service</em>: GPS tracking, geocoding, và tối ưu hóa tuyến đường giao hàng.</li>
 <li><em>Amazon Cognito</em>: Authentication và authorization cho 3 loại user roles.</li>
 <li><em>Amazon SNS</em>: Push notifications và SMS alerts cho trạng thái đơn hàng và promotions.</li>
 <li><em>Amazon SES</em>: Email service cho order confirmations, receipts và marketing campaigns.</li>
+<li><em>Cloudflare Tunnel</em>: Kết nối domain an toàn giữa Amplify frontend và Elastic Beanstalk backend sử dụng Quick Tunnel.</li>
+<li><em>Payment Gateway Integration</em>: Xử lý thanh toán bên ngoài cho các giao dịch an toàn.</li>
 <li><em>Amazon CloudWatch</em>: Monitoring và logging cho toàn bộ hệ thống.</li>
 <li><em>AWS IAM</em>: Quản lý permissions và security policies.</li>
 </ul>
 <p><em>Thiết kế thành phần</em></p>
 <ul>
-<li><em>Frontend Layer</em>: ReactJS application hosted trên Amplify với responsive design.</li>
-<li><em>API Layer</em>: API Gateway làm entry point cho tất cả HTTP requests.</li>
-<li><em>Business Logic Layer</em>: AWS Lambda functions viết bằng C#/.NET xử lý core logic.</li>
-<li><em>Data Layer</em>: DynamoDB tables cho structured data, S3 buckets cho file storage.</li>
+<li><em>Frontend Layer</em>: ReactJS application hosted trên Amplify với responsive design và Git-based CI/CD.</li>
+<li><em>Application Layer</em>: Containerized .NET Framework 8.0 services triển khai trên Elastic Beanstalk với auto-scaling capabilities.</li>
+<li><em>Network Layer</em>: Cloudflare Tunnel (Quick Tunnel) cung cấp kết nối domain an toàn giữa frontend và backend services.</li>
+<li><em>Data Storage Layer</em>: DynamoDB cho structured data, S3 cho file storage, Location Service cho GPS data.</li>
 <li><em>Authentication Layer</em>: Cognito User Pools quản lý users với 3 groups (Customer, Shipper, Admin).</li>
-<li><em>Notification Layer</em>: SNS cho real-time notifications, SES cho email communications.</li>
-<li><em>Monitoring Layer</em>: CloudWatch theo dõi performance, errors và usage metrics.</li>
+<li><em>Communication Layer</em>: SNS cho real-time notifications, SES cho email communications.</li>
+<li><em>Payment Layer</em>: Tích hợp external payment gateways cho xử lý giao dịch an toàn.</li>
+<li><em>Monitoring Layer</em>: CloudWatch theo dõi performance, errors và usage metrics với IAM security controls.</li>
 </ul>
 <h3 id="4-triển-khai-kỹ-thuật">4. Triển khai kỹ thuật</h3>
 <p><em>Các giai đoạn triển khai</em><br>
 Dự án Coffee Cloud được chia thành 4 giai đoạn chính trong vòng 3 tháng:</p>
 <ol>
 <li><em>Nghiên cứu và thiết kế</em>: Phân tích yêu cầu business, thiết kế database schema, wireframe UI/UX và kiến trúc system (Tháng 1).</li>
-<li><em>Setup Environment và Backend Development</em>: Cấu hình AWS services, phát triển Lambda functions với C#/.NET, thiết lập DynamoDB tables và API Gateway (Tháng 1-2).</li>
+<li><em>Setup Environment và Backend Development</em>: Cấu hình AWS services, phát triển containerized backend services, thiết lập DynamoDB tables và Elastic Beanstalk environment (Tháng 1-2).</li>
 <li><em>Frontend Development</em>: Xây dựng ReactJS application, tích hợp với backend APIs, implement authentication flow với Cognito (Tháng 2).</li>
-<li><em>Testing và Deployment</em>: Unit testing, integration testing, performance testing, deploy lên Amplify và monitoring (Tháng 3).</li>
+<li><em>Testing và Deployment</em>: Unit testing, integration testing, performance testing, deploy lên Amplify và Elastic Beanstalk với monitoring (Tháng 3).</li>
 </ol>
 <p><em>Yêu cầu kỹ thuật</em></p>
 <ul>
 <li><em>Frontend Requirements</em>: ReactJS với hooks, React Router cho navigation, Axios cho API calls, CSS frameworks (Bootstrap/Material-UI), responsive design cho mobile và desktop.</li>
-<li><em>Backend Requirements</em>: C#/.NET 6+ runtime trên Lambda, Entity Framework Core cho data access, JWT authentication, exception handling và logging.</li>
+<li><em>Backend Requirements</em>: Containerized .NET Framework 8.0 services trên Elastic Beanstalk, Entity Framework Core cho data access, JWT authentication, exception handling và logging.</li>
 <li><em>Database Design</em>: DynamoDB tables cho Users, Products, Orders, OrderItems, Points, Vouchers với proper indexing và relationships.</li>
-<li><em>DevOps Requirements</em>: Git version control, Amplify CI/CD pipeline, CloudWatch monitoring, IAM roles và policies cho security.</li>
+<li><em>Location Services</em>: Amazon Location Service integration cho GPS tracking, geocoding, và route optimization.</li>
+<li><em>Payment Integration</em>: External payment gateway APIs cho xử lý giao dịch an toàn.</li>
+<li><em>Network Integration</em>: Cloudflare Tunnel (Quick Tunnel) cho kết nối domain an toàn giữa Amplify frontend và Elastic Beanstalk backend.</li>
+<li><em>DevOps Requirements</em>: Git version control, Amplify CI/CD pipeline, Elastic Beanstalk deployment, CloudWatch monitoring, IAM roles và policies cho security.</li>
 </ul>
 <h3 id="5-lộ-trình--mốc-triển-khai">5. Lộ trình &amp; Mốc triển khai</h3>
+<p><em>Lịch trình dự án</em></p>
 <ul>
 <li><em>Giai đoạn 1 (Tuần 1-4)</em>: Nghiên cứu và thiết kế hệ thống
 <ul>
@@ -1123,9 +1131,11 @@ Dự án Coffee Cloud được chia thành 4 giai đoạn chính trong vòng 3 t
 <li><em>Giai đoạn 2 (Tuần 5-8)</em>: Phát triển Backend và Infrastructure
 <ul>
 <li>Tạo DynamoDB tables và configure indexes</li>
-<li>Phát triển Lambda functions với C#/.NET</li>
-<li>Setup API Gateway và integrate với Lambda</li>
+<li>Phát triển containerized backend services với C#/.NET</li>
+<li>Setup Elastic Beanstalk environment và deployment</li>
 <li>Configure Cognito User Pools và Groups</li>
+<li>Tích hợp Amazon Location Service cho GPS tracking</li>
+<li>Setup payment gateway integration</li>
 </ul>
 </li>
 <li><em>Giai đoạn 3 (Tuần 9-10)</em>: Phát triển Frontend
@@ -1147,28 +1157,30 @@ Dự án Coffee Cloud được chia thành 4 giai đoạn chính trong vòng 3 t
 </ul>
 <h3 id="6-ước-tính-ngân-sách">6. Ước tính ngân sách</h3>
 <p>Dự án Coffee Cloud được thiết kế để tận dụng tối đa AWS Free Tier trong giai đoạn đầu phát triển và testing.</p>
-<p><em>Chi phí AWS Services (Monthly)</em></p>
+<h3 id="chi-phí-hạ-tầng">Chi phí hạ tầng</h3>
+<p><em>Dịch vụ AWS (Monthly)</em></p>
 <ul>
 <li>AWS Amplify: $0.00 USD (Free Tier: 1000 build minutes, 15GB storage)</li>
-<li>AWS Lambda: $0.00 USD (Free Tier: 1M requests, 400,000 GB-seconds)</li>
-<li>Amazon API Gateway: $0.00 USD (Free Tier: 1M API calls)</li>
+<li>AWS Elastic Beanstalk: $0.00 USD (Free Tier: t3.micro instance, 750 hours/month)</li>
 <li>Amazon DynamoDB: $0.00 USD (Free Tier: 25GB storage, 25 RCU/WCU)</li>
 <li>Amazon S3: $0.00 USD (Free Tier: 5GB standard storage)</li>
+<li>Amazon Location Service: $0.00 USD (Free Tier: 5000 requests/month)</li>
 <li>Amazon Cognito: $0.00 USD (Free Tier: 50,000 MAU)</li>
 <li>Amazon SNS: $0.00 USD (Free Tier: 1M publications, 100,000 HTTP/HTTPS requests)</li>
 <li>Amazon SES: $0.00 USD (Free Tier: 62,000 emails/month)</li>
 <li>Amazon CloudWatch: $0.00 USD (Free Tier: 10 custom metrics, 5GB logs)</li>
 </ul>
-<p><em>Chi phí sau Free Tier (Estimated for production)</em></p>
+<p><em>Chi phí sau Free Tier (Ước tính cho production)</em></p>
 <ul>
 <li>AWS Amplify: ~$1.00 USD/month (hosting + build minutes)</li>
-<li>AWS Lambda: ~$0.20 USD/month (based on 10K requests/day)</li>
-<li>API Gateway: ~$3.50 USD/month (1M requests)</li>
-<li>DynamoDB: ~$1.25 USD/month (additional RCU/WCU)</li>
+<li>AWS Elastic Beanstalk: ~$15.00 USD/month (t3.small instance cho production)</li>
+<li>Amazon DynamoDB: ~$1.25 USD/month (additional RCU/WCU)</li>
+<li>Amazon Location Service: ~$2.00 USD/month (additional GPS requests)</li>
 <li>Amazon SNS: ~$0.50 USD/month (additional notifications + SMS)</li>
 <li>Amazon SES: ~$1.00 USD/month (additional emails beyond free tier)</li>
+<li>Payment Gateway Fees: ~$5.00 USD/month (transaction processing fees)</li>
 </ul>
-<p><em>Tổng ước tính</em>: $0.00 USD/month (Development), ~$7.45 USD/month (Production)<br>
+<p><em>Tổng ước tính</em>: $0.00 USD/month (Development), ~$25.75 USD/month (Production)<br>
 <em>Chi phí phát triển</em>: Chỉ phát sinh chi phí nhân lực cho developer</p>
 <h3 id="7-đánh-giá-rủi-ro">7. Đánh giá rủi ro</h3>
 <p><em>Ma trận rủi ro</em></p>
@@ -1942,19 +1954,19 @@ Dự án Coffee Cloud được chia thành 4 giai đoạn chính trong vòng 3 t
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1764588072"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1764588072"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1764588072"></script>
-    <script src="../../js/jquery.sticky.js?1764588072"></script>
-    <script src="../../js/featherlight.min.js?1764588072"></script>
-    <script src="../../js/highlight.pack.js?1764588072"></script>
+    <script src="../../js/clipboard.min.js?1765099433"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1765099433"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1765099433"></script>
+    <script src="../../js/jquery.sticky.js?1765099433"></script>
+    <script src="../../js/featherlight.min.js?1765099433"></script>
+    <script src="../../js/highlight.pack.js?1765099433"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1764588072"></script>
-    <script src="../../js/learn.js?1764588072"></script>
-    <script src="../../js/hugo-learn.js?1764588072"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1765099433"></script>
+    <script src="../../js/learn.js?1765099433"></script>
+    <script src="../../js/hugo-learn.js?1765099433"></script>
 
-    <link href="../../mermaid/mermaid.css?1764588072" rel="stylesheet" />
-    <script src="../../mermaid/mermaid.js?1764588072"></script>
+    <link href="../../mermaid/mermaid.css?1765099433" rel="stylesheet" />
+    <script src="../../mermaid/mermaid.js?1765099433"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

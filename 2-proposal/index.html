@@ -15,21 +15,21 @@
     <title>Proposal :: Internship Report</title>
 
     
-    <link href="../css/nucleus.css?1764588071" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1764588071" rel="stylesheet">
-    <link href="../css/hybrid.css?1764588071" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1764588071" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1764588071" rel="stylesheet">
-    <link href="../css/auto-complete.css?1764588071" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1764588071" rel="stylesheet">
-    <link href="../css/theme.css?1764588071" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1764588071" rel="stylesheet">
+    <link href="../css/nucleus.css?1765099428" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1765099428" rel="stylesheet">
+    <link href="../css/hybrid.css?1765099428" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1765099428" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1765099428" rel="stylesheet">
+    <link href="../css/auto-complete.css?1765099428" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1765099428" rel="stylesheet">
+    <link href="../css/theme.css?1765099428" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1765099428" rel="stylesheet">
     
-    <link href="../css/theme-workshop.css?1764588071" rel="stylesheet">
+    <link href="../css/theme-workshop.css?1765099428" rel="stylesheet">
     
     
 
-    <script src="../js/jquery-3.3.1.min.js?1764588071"></script>
+    <script src="../js/jquery-3.3.1.min.js?1765099428"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -88,14 +88,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1764588071"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1764588071"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1765099428"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1765099428"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/tamhuynh15123.github.io\/proposal\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1764588071"></script>
+<script type="text/javascript" src="../js/search.js?1765099428"></script>
  
   </div>
 
@@ -1072,50 +1072,56 @@
 <h3 id="whats-the-problem">What&rsquo;s the Problem?</h3>
 <p>Traditional coffee shops face difficulties managing crowded orders, customers have to wait long to place orders and receive products. There is no point accumulation system to encourage customers to return, and order status tracking is not transparent.</p>
 <h3 id="the-solution">The Solution</h3>
-<p>The Coffee Cloud platform is built with serverless architecture on AWS, using ReactJS for frontend, C#/.NET Lambda for backend logic, DynamoDB for data storage, and Cognito for user management. The system provides three separate interfaces for Customer (ordering, point accumulation), Shipper (receiving and delivering), and Admin (overall management). Integrates API Gateway to ensure security and scalability. AWS SNS is used for real-time notifications about order status, while SES handles email notifications and marketing campaigns. Key features include online ordering, point system, real-time order tracking, inventory management, and multi-channel notification system.</p>
+<p>The Coffee Cloud platform is built with scalable cloud architecture on AWS, using ReactJS for frontend hosted on Amplify, and containerized backend services deployed on Elastic Beanstalk. The system provides three separate interfaces for Customer (ordering, point accumulation), Shipper (receiving and delivering), and Admin (overall management). Data is stored in DynamoDB for high performance with S3 for static assets and Amazon Location Service for delivery tracking. Authentication is managed by Cognito with multi-role support. AWS SNS handles real-time notifications about order status, while SES manages email communications. Payment processing is integrated through external payment gateways. Key features include online ordering, point system, real-time order tracking with GPS, inventory management, and multi-channel notification system.</p>
 <h3 id="benefits-and-return-on-investment">Benefits and Return on Investment</h3>
 <p>The system helps increase revenue through online channels, reduces customer waiting time, and optimizes operational processes. Low deployment cost thanks to AWS Free Tier usage, estimated monthly operating cost under $5 USD for the initial phase. The point system helps increase customer return rate, expected to increase revenue by 20-30% compared to traditional methods. Return on investment time is estimated at 3-6 months thanks to saving labor costs and increasing sales efficiency.</p>
 <h3 id="3-solution-architecture">3. Solution Architecture</h3>
-<p>Coffee Cloud adopts a fully serverless architecture on AWS to ensure scalability and cost efficiency. The ReactJS frontend is deployed on AWS Amplify with automatic CI/CD integration. Backend APIs are built with C#/.NET and run on AWS Lambda, connected through API Gateway to ensure security and throttling. Data is stored in DynamoDB for high performance and S3 for static assets. Authentication and authorization are managed by Amazon Cognito with multi-role support (Customer, Shipper, Admin).</p>
+<p>Coffee Cloud adopts a scalable containerized architecture on AWS to ensure high availability and cost efficiency. The ReactJS frontend is deployed on AWS Amplify with automatic CI/CD integration from Git repository. Backend services are containerized and deployed on AWS Elastic Beanstalk for easy scaling and management. Data is stored in DynamoDB for high performance, S3 for static assets, and Amazon Location Service for GPS tracking and delivery optimization. Authentication and authorization are managed by Amazon Cognito with multi-role support (Customer, Shipper, Admin). External payment services are integrated for secure transaction processing.</p>
 <p><img src="../images/2-Proposal/architecture_proposal.jpg" alt="Coffee Cloud Platform Architecture"></p>
 <h3 id="aws-services-used">AWS Services Used</h3>
 <ul>
-<li><strong>AWS Amplify</strong>: Hosts ReactJS frontend with automatic CI/CD pipeline.</li>
-<li><strong>AWS Lambda</strong>: Backend logic using C#/.NET runtime for business logic processing.</li>
-<li><strong>Amazon API Gateway</strong>: REST API endpoints to connect frontend and backend.</li>
+<li><strong>AWS Amplify</strong>: Hosts ReactJS frontend with automatic CI/CD pipeline from Git repository.</li>
+<li><strong>AWS Elastic Beanstalk</strong>: Containerized .NET Framework 8.0 backend services with auto-scaling and load balancing.</li>
 <li><strong>Amazon DynamoDB</strong>: NoSQL database storing users, orders, products, points data.</li>
-<li><strong>Amazon S3</strong>: Stores static assets like product images and documents.</li>
+<li><strong>Amazon S3</strong>: Stores static assets like product images, documents, and backup data.</li>
+<li><strong>Amazon Location Service</strong>: GPS tracking, geocoding, and route optimization for delivery.</li>
 <li><strong>Amazon Cognito</strong>: Authentication and authorization for 3 user role types.</li>
 <li><strong>Amazon SNS</strong>: Push notifications and SMS alerts for order status and promotions.</li>
 <li><strong>Amazon SES</strong>: Email service for order confirmations, receipts, and marketing campaigns.</li>
+<li><strong>Cloudflare Tunnel</strong>: Secure domain connection between Amplify frontend and Elastic Beanstalk backend using Quick Tunnel.</li>
+<li><strong>Payment Gateway Integration</strong>: External payment processing for secure transactions.</li>
 <li><strong>Amazon CloudWatch</strong>: Monitoring and logging for the entire system.</li>
 <li><strong>AWS IAM</strong>: Manages permissions and security policies.</li>
 </ul>
 <h3 id="component-design">Component Design</h3>
 <ul>
-<li><strong>Frontend Layer</strong>: ReactJS application hosted on Amplify with responsive design.</li>
-<li><strong>API Layer</strong>: API Gateway serves as entry point for all HTTP requests.</li>
-<li><strong>Business Logic Layer</strong>: AWS Lambda functions written in C#/.NET handle core logic.</li>
-<li><strong>Data Layer</strong>: DynamoDB tables for structured data, S3 buckets for file storage.</li>
+<li><strong>Frontend Layer</strong>: ReactJS application hosted on Amplify with responsive design and Git-based CI/CD.</li>
+<li><strong>Application Layer</strong>: Containerized .NET Framework 8.0 services deployed on Elastic Beanstalk with auto-scaling capabilities.</li>
+<li><strong>Network Layer</strong>: Cloudflare Tunnel (Quick Tunnel) providing secure domain connection between frontend and backend services.</li>
+<li><strong>Data Storage Layer</strong>: DynamoDB for structured data, S3 for file storage, Location Service for GPS data.</li>
 <li><strong>Authentication Layer</strong>: Cognito User Pools manage users with 3 groups (Customer, Shipper, Admin).</li>
-<li><strong>Notification Layer</strong>: SNS for real-time notifications, SES for email communications.</li>
-<li><strong>Monitoring Layer</strong>: CloudWatch tracks performance, errors, and usage metrics.</li>
+<li><strong>Communication Layer</strong>: SNS for real-time notifications, SES for email communications.</li>
+<li><strong>Payment Layer</strong>: Integrated external payment gateways for secure transaction processing.</li>
+<li><strong>Monitoring Layer</strong>: CloudWatch tracks performance, errors, and usage metrics with IAM security controls.</li>
 </ul>
 <h3 id="4-technical-implementation">4. Technical Implementation</h3>
 <p><strong>Implementation Phases</strong>
 The Coffee Cloud project is divided into 4 main phases over 3 months:</p>
 <ol>
 <li><strong>Research and Design</strong>: Analyze business requirements, design database schema, wireframe UI/UX and system architecture (Month 1).</li>
-<li><strong>Environment Setup and Backend Development</strong>: Configure AWS services, develop Lambda functions with C#/.NET, set up DynamoDB tables and API Gateway (Month 1-2).</li>
+<li><strong>Environment Setup and Backend Development</strong>: Configure AWS services, develop containerized backend services, set up DynamoDB tables and Elastic Beanstalk environment (Month 1-2).</li>
 <li><strong>Frontend Development</strong>: Build ReactJS application, integrate with backend APIs, implement authentication flow with Cognito (Month 2).</li>
-<li><strong>Testing and Deployment</strong>: Unit testing, integration testing, performance testing, deploy to Amplify and monitoring (Month 3).</li>
+<li><strong>Testing and Deployment</strong>: Unit testing, integration testing, performance testing, deploy to Amplify and Elastic Beanstalk with monitoring (Month 3).</li>
 </ol>
 <p><strong>Technical Requirements</strong></p>
 <ul>
 <li><strong>Frontend Requirements</strong>: ReactJS with hooks, React Router for navigation, Axios for API calls, CSS frameworks (Bootstrap/Material-UI), responsive design for mobile and desktop.</li>
-<li><strong>Backend Requirements</strong>: C#/.NET 6+ runtime on Lambda, Entity Framework Core for data access, JWT authentication, exception handling and logging.</li>
+<li><strong>Backend Requirements</strong>: Containerized .NET Framework 8.0 services on Elastic Beanstalk, Entity Framework Core for data access, JWT authentication, exception handling and logging.</li>
 <li><strong>Database Design</strong>: DynamoDB tables for Users, Products, Orders, OrderItems, Points, Vouchers with proper indexing and relationships.</li>
-<li><strong>DevOps Requirements</strong>: Git version control, Amplify CI/CD pipeline, CloudWatch monitoring, IAM roles and policies for security.</li>
+<li><strong>Location Services</strong>: Amazon Location Service integration for GPS tracking, geocoding, and route optimization.</li>
+<li><strong>Payment Integration</strong>: External payment gateway APIs for secure transaction processing.</li>
+<li><strong>Network Integration</strong>: Cloudflare Tunnel (Quick Tunnel) for secure connection between Amplify frontend and Elastic Beanstalk backend.</li>
+<li><strong>DevOps Requirements</strong>: Git version control, Amplify CI/CD pipeline, Elastic Beanstalk deployment, CloudWatch monitoring, IAM roles and policies for security.</li>
 </ul>
 <h3 id="5-timeline--milestones">5. Timeline &amp; Milestones</h3>
 <p><strong>Project Timeline</strong></p>
@@ -1131,9 +1137,11 @@ The Coffee Cloud project is divided into 4 main phases over 3 months:</p>
 <li><strong>Phase 2 (Week 5-8)</strong>: Backend and Infrastructure Development
 <ul>
 <li>Create DynamoDB tables and configure indexes</li>
-<li>Develop Lambda functions with C#/.NET</li>
-<li>Setup API Gateway and integrate with Lambda</li>
+<li>Develop containerized backend services with C#/.NET</li>
+<li>Setup Elastic Beanstalk environment and deployment</li>
 <li>Configure Cognito User Pools and Groups</li>
+<li>Integrate Amazon Location Service for GPS tracking</li>
+<li>Setup payment gateway integration</li>
 </ul>
 </li>
 <li><strong>Phase 3 (Week 9-10)</strong>: Frontend Development
@@ -1159,10 +1167,10 @@ The Coffee Cloud project is divided into 4 main phases over 3 months:</p>
 <p><strong>AWS Services (Monthly)</strong></p>
 <ul>
 <li>AWS Amplify: $0.00 USD (Free Tier: 1000 build minutes, 15GB storage)</li>
-<li>AWS Lambda: $0.00 USD (Free Tier: 1M requests, 400,000 GB-seconds)</li>
-<li>Amazon API Gateway: $0.00 USD (Free Tier: 1M API calls)</li>
+<li>AWS Elastic Beanstalk: $0.00 USD (Free Tier: t3.micro instance, 750 hours/month)</li>
 <li>Amazon DynamoDB: $0.00 USD (Free Tier: 25GB storage, 25 RCU/WCU)</li>
 <li>Amazon S3: $0.00 USD (Free Tier: 5GB standard storage)</li>
+<li>Amazon Location Service: $0.00 USD (Free Tier: 5000 requests/month)</li>
 <li>Amazon Cognito: $0.00 USD (Free Tier: 50,000 MAU)</li>
 <li>Amazon SNS: $0.00 USD (Free Tier: 1M publications, 100,000 HTTP/HTTPS requests)</li>
 <li>Amazon SES: $0.00 USD (Free Tier: 62,000 emails/month)</li>
@@ -1171,13 +1179,14 @@ The Coffee Cloud project is divided into 4 main phases over 3 months:</p>
 <p><strong>Post Free Tier Costs (Estimated for production)</strong></p>
 <ul>
 <li>AWS Amplify: ~$1.00 USD/month (hosting + build minutes)</li>
-<li>AWS Lambda: ~$0.20 USD/month (based on 10K requests/day)</li>
-<li>API Gateway: ~$3.50 USD/month (1M requests)</li>
-<li>DynamoDB: ~$1.25 USD/month (additional RCU/WCU)</li>
+<li>AWS Elastic Beanstalk: ~$15.00 USD/month (t3.small instance for production)</li>
+<li>Amazon DynamoDB: ~$1.25 USD/month (additional RCU/WCU)</li>
+<li>Amazon Location Service: ~$2.00 USD/month (additional GPS requests)</li>
 <li>Amazon SNS: ~$0.50 USD/month (additional notifications + SMS)</li>
 <li>Amazon SES: ~$1.00 USD/month (additional emails beyond free tier)</li>
+<li>Payment Gateway Fees: ~$5.00 USD/month (transaction processing fees)</li>
 </ul>
-<p><strong>Total Estimation</strong>: $0.00 USD/month (Development), ~$7.45 USD/month (Production)
+<p><strong>Total Estimation</strong>: $0.00 USD/month (Development), ~$25.75 USD/month (Production)
 <strong>Development Cost</strong>: Only incurs developer labor costs</p>
 <h3 id="7-risk-assessment">7. Risk Assessment</h3>
 <h4 id="risk-matrix">Risk Matrix</h4>
@@ -1954,19 +1963,19 @@ The Coffee Cloud project is divided into 4 main phases over 3 months:</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../js/clipboard.min.js?1764588071"></script>
-    <script src="../js/perfect-scrollbar.min.js?1764588071"></script>
-    <script src="../js/perfect-scrollbar.jquery.min.js?1764588071"></script>
-    <script src="../js/jquery.sticky.js?1764588071"></script>
-    <script src="../js/featherlight.min.js?1764588071"></script>
-    <script src="../js/highlight.pack.js?1764588071"></script>
+    <script src="../js/clipboard.min.js?1765099428"></script>
+    <script src="../js/perfect-scrollbar.min.js?1765099428"></script>
+    <script src="../js/perfect-scrollbar.jquery.min.js?1765099428"></script>
+    <script src="../js/jquery.sticky.js?1765099428"></script>
+    <script src="../js/featherlight.min.js?1765099428"></script>
+    <script src="../js/highlight.pack.js?1765099428"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../js/modernizr.custom-3.6.0.js?1764588071"></script>
-    <script src="../js/learn.js?1764588071"></script>
-    <script src="../js/hugo-learn.js?1764588071"></script>
+    <script src="../js/modernizr.custom-3.6.0.js?1765099428"></script>
+    <script src="../js/learn.js?1765099428"></script>
+    <script src="../js/hugo-learn.js?1765099428"></script>
 
-    <link href="../mermaid/mermaid.css?1764588071" rel="stylesheet" />
-    <script src="../mermaid/mermaid.js?1764588071"></script>
+    <link href="../mermaid/mermaid.css?1765099428" rel="stylesheet" />
+    <script src="../mermaid/mermaid.js?1765099428"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
