@@ -314,18 +314,6 @@
                 href="https://tamhuynh15123.github.io/proposal/5-workshop/5.1-amplify-frontend/5.1.2-prerequisites/"
                 />
   </url><url>
-    <loc>https://tamhuynh15123.github.io/proposal/5-workshop/5.2-eb-backend/5.2.2-prerequisites/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="https://tamhuynh15123.github.io/proposal/vi/5-workshop/5.2-eb-backend/5.2.2-prerequisites/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://tamhuynh15123.github.io/proposal/5-workshop/5.2-eb-backend/5.2.2-prerequisites/"
-                />
-  </url><url>
     <loc>https://tamhuynh15123.github.io/proposal/2-proposal/</loc>
     <xhtml:link
                 rel="alternate"
@@ -336,6 +324,18 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://tamhuynh15123.github.io/proposal/2-proposal/"
+                />
+  </url><url>
+    <loc>https://tamhuynh15123.github.io/proposal/5-workshop/5.2-eb-backend/5.2.2-publish-app/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="https://tamhuynh15123.github.io/proposal/vi/5-workshop/5.2-eb-backend/5.2.2-publish-app/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://tamhuynh15123.github.io/proposal/5-workshop/5.2-eb-backend/5.2.2-publish-app/"
                 />
   </url><url>
     <loc>https://tamhuynh15123.github.io/proposal/1-worklog/1.10-week10/</loc>
@@ -374,16 +374,16 @@
                 href="https://tamhuynh15123.github.io/proposal/1-worklog/1.12-week12/"
                 />
   </url><url>
-    <loc>https://tamhuynh15123.github.io/proposal/5-workshop/5.2-eb-backend/5.2.3-create-api/</loc>
+    <loc>https://tamhuynh15123.github.io/proposal/5-workshop/5.2-eb-backend/5.2.3-deploy-beanstalk/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="https://tamhuynh15123.github.io/proposal/vi/5-workshop/5.2-eb-backend/5.2.3-create-api/"
+                href="https://tamhuynh15123.github.io/proposal/vi/5-workshop/5.2-eb-backend/5.2.3-deploy-beanstalk/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://tamhuynh15123.github.io/proposal/5-workshop/5.2-eb-backend/5.2.3-create-api/"
+                href="https://tamhuynh15123.github.io/proposal/5-workshop/5.2-eb-backend/5.2.3-deploy-beanstalk/"
                 />
   </url><url>
     <loc>https://tamhuynh15123.github.io/proposal/5-workshop/5.1-amplify-frontend/5.1.3-setup-git/</loc>
@@ -434,28 +434,16 @@
                 href="https://tamhuynh15123.github.io/proposal/4-eventparticipated/"
                 />
   </url><url>
-    <loc>https://tamhuynh15123.github.io/proposal/5-workshop/5.2-eb-backend/5.2.4-publish-app/</loc>
+    <loc>https://tamhuynh15123.github.io/proposal/5-workshop/5.2-eb-backend/5.2.4-testing/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="https://tamhuynh15123.github.io/proposal/vi/5-workshop/5.2-eb-backend/5.2.4-publish-app/"
+                href="https://tamhuynh15123.github.io/proposal/vi/5-workshop/5.2-eb-backend/5.2.4-testing/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://tamhuynh15123.github.io/proposal/5-workshop/5.2-eb-backend/5.2.4-publish-app/"
-                />
-  </url><url>
-    <loc>https://tamhuynh15123.github.io/proposal/5-workshop/5.2-eb-backend/5.2.5-deploy-beanstalk/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="https://tamhuynh15123.github.io/proposal/vi/5-workshop/5.2-eb-backend/5.2.5-deploy-beanstalk/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://tamhuynh15123.github.io/proposal/5-workshop/5.2-eb-backend/5.2.5-deploy-beanstalk/"
+                href="https://tamhuynh15123.github.io/proposal/5-workshop/5.2-eb-backend/5.2.4-testing/"
                 />
   </url><url>
     <loc>https://tamhuynh15123.github.io/proposal/5-workshop/5.1-amplify-frontend/5.1.5-testing/</loc>
@@ -492,18 +480,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://tamhuynh15123.github.io/proposal/6-self-evaluation/"
-                />
-  </url><url>
-    <loc>https://tamhuynh15123.github.io/proposal/5-workshop/5.2-eb-backend/5.2.6-testing/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="https://tamhuynh15123.github.io/proposal/vi/5-workshop/5.2-eb-backend/5.2.6-testing/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://tamhuynh15123.github.io/proposal/5-workshop/5.2-eb-backend/5.2.6-testing/"
                 />
   </url><url>
     <loc>https://tamhuynh15123.github.io/proposal/7-feedback/</loc>
